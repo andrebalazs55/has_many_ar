@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  encoding: utf8
+  pool: 15
+  timeout: 5000
+  prepared_statements: false
+
+development:
+  <<: *defaults
+  database: has_many
+
+test: &test
+  <<: *defaults
+  database: has_many_test
+
